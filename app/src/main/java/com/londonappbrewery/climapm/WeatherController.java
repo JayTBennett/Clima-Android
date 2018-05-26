@@ -92,7 +92,8 @@ public class WeatherController extends AppCompatActivity {
                 params.put("lon", location.getLongitude());
                 params.put("appid", APP_ID);
 
-                letsDoSomeNetworking(params);
+                if (mUseLocation)
+                    letsDoSomeNetworking(params);
             }
 
             @Override
